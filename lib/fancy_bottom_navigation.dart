@@ -93,6 +93,12 @@ class FancyBottomNavigationState extends State<FancyBottomNavigation>
     _setSelected(widget.tabs[widget.initialSelection].key);
   }
 
+  @override
+  void didUpdateWidget() {
+    super.didUpdateWidget();
+    _setSelected(widget.tabs[widget.initialSelection].key);
+  }
+
   _setSelected(UniqueKey key) {
     int selected = widget.tabs.indexWhere((tabData) => tabData.key == key);
 
