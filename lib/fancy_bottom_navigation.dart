@@ -94,8 +94,8 @@ class FancyBottomNavigationState extends State<FancyBottomNavigation>
   }
 
   @override
-  void didUpdateWidget() {
-    super.didUpdateWidget();
+  void didUpdateWidget(covariant final FancyBottomNavigation oldWidget) {
+    super.didUpdateWidget(oldWidget);
     _setSelected(widget.tabs[widget.initialSelection].key);
   }
 
